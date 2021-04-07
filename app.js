@@ -38,6 +38,8 @@ const defaultItems = [item1, item2, item3];
 
 app.get("/", function(req, res) {
 
+  let foundItems = [];
+
   Item.find({}, function(err, foundItems){
 
     if (foundItems.length === 0) {
